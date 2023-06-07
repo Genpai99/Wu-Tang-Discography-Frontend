@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/Bamboo\ Regular.ttf');
+  }
+  
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    font-family: 'MyCustomFont', sans-serif;
+  }
+  
+  .header {
+    background-color: #ffd104;
+    padding: 20px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+  }
+
+  .wutanglogo {
+    width: 200px;
+    height: auto;
+  }
+  
+  .navbar {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .navbar li {
+    margin-right: 10px;
+  }
+  
+  .navbar a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  
+  .navbar a:hover {
+    background-color: gray;
+  }
+  
+  
+  .content {
+    padding: 20px;
+    color: white;
+  }
+  
+  .delete-button, .update-button {
+    background-color: #ffd104;
+    color: black;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "MyCustomFont", sans-serif;
+    justify-content: center;
+    text-align: center;
+  }
