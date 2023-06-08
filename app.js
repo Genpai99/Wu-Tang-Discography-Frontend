@@ -6,7 +6,7 @@ albumOption.addEventListener('click', fetchAlbums);
 
 // Function to fetch and display albums
 function fetchAlbums() {
-  fetch('http://localhost:3000/api/albums')
+  fetch('https://wutangdiscography.herokuapp.com/api/albums')
     .then(response => response.json())
     .then(data => {
       const albums = data;
@@ -89,7 +89,7 @@ function displayAlbum(album) {
 }
 
 function deleteAlbum(title) {
-  fetch(`http://localhost:3000/api/albums/${encodeURIComponent(title)}`, {
+  fetch(`https://wutangdiscography.herokuapp.com/api/albums/${encodeURIComponent(title)}`, {
     method: 'DELETE'
   })
     .then(response => {
@@ -162,7 +162,7 @@ function displayUpdateForm(album) {
 
 
 function updateAlbum(albumTitle, updateData) {
-  fetch(`http://localhost:3000/api/albums/${encodeURIComponent(albumTitle)}`, {
+  fetch(`https://wutangdiscography.herokuapp.com/api/albums/${encodeURIComponent(album.name)}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
@@ -192,7 +192,7 @@ lyricsOption.addEventListener('click', fetchSongs);
 
 // Function to fetch and display songs
 function fetchSongs() {
-  fetch('http://localhost:3000/api/songs')
+  fetch('https://wutangdiscography.herokuapp.com/api/songs')
     .then(response => response.json())
     .then(data => {
       const songs = data;
@@ -240,7 +240,7 @@ function displaySongDetails(song) {
 
 
   // Fetch lyrics and append them to the song details
-  fetch(`http://localhost:3000/api/songs/${encodeURIComponent(song.title)}/lyrics`)
+  fetch(`https://wutangdiscography.herokuapp.com/api/songs/${encodeURIComponent(song.title)}/lyrics`)
     .then(response => response.json())
     .then(data => {
       const lyrics = data.lyrics;
@@ -313,7 +313,7 @@ function displayUpdateForm(song) {
 }
 
 function updateSong(songTitle, updateData) {
-  fetch(`http://localhost:3000/api/songs/${encodeURIComponent(songTitle)}`, {
+  fetch(`https://wutangdiscography.herokuapp.com/api/songs/${encodeURIComponent(songTitle)}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
@@ -334,7 +334,7 @@ function updateSong(songTitle, updateData) {
 }
 
 function deleteSong(title) {
-  fetch(`http://localhost:3000/api/songs/${encodeURIComponent(title)}`, {
+  fetch(`https://wutangdiscography.herokuapp.com/api/songs/${encodeURIComponent(title)}`, {
     method: 'DELETE'
   })
     .then(response => {
